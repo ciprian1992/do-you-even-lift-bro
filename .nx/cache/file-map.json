@@ -78,7 +78,7 @@
       },
       {
         "file": "angular.json",
-        "hash": "8308502821971415850"
+        "hash": "14983276163348353732"
       },
       {
         "file": "capacitor.config.ts",
@@ -133,6 +133,22 @@
         "hash": "17195997832060172707"
       },
       {
+        "file": "src/app/exercises-container/exercises-container.component.ts",
+        "hash": "17667512653906509614"
+      },
+      {
+        "file": "src/app/exercises-container/exercises-container.module.ts",
+        "hash": "11153418334690120507"
+      },
+      {
+        "file": "src/app/exercises-container/explore-container.component.html",
+        "hash": "6937410917747947614"
+      },
+      {
+        "file": "src/app/exercises-container/explore-container.component.scss",
+        "hash": "14250411118003398491"
+      },
+      {
         "file": "src/app/explore-container/explore-container.component.html",
         "hash": "10574455846506954855"
       },
@@ -153,28 +169,40 @@
         "hash": "7418061059857182964"
       },
       {
-        "file": "src/app/tab1/tab1-routing.module.ts",
-        "hash": "11381973081829977082"
+        "file": "src/app/max-weight-container/max-weight-container.component.html",
+        "hash": "441526641009643379"
       },
       {
-        "file": "src/app/tab1/tab1.module.ts",
-        "hash": "15566281578784902545"
-      },
-      {
-        "file": "src/app/tab1/tab1.page.html",
-        "hash": "13207509910740934786"
-      },
-      {
-        "file": "src/app/tab1/tab1.page.scss",
+        "file": "src/app/max-weight-container/max-weight-container.component.scss",
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/tab1/tab1.page.spec.ts",
-        "hash": "9476109993445867871"
+        "file": "src/app/max-weight-container/max-weight-container.component.ts",
+        "hash": "14748556672414932390"
       },
       {
-        "file": "src/app/tab1/tab1.page.ts",
-        "hash": "9117558980506864833"
+        "file": "src/app/max-weight-container/max-weight-container.module.ts",
+        "hash": "9683709670576558729"
+      },
+      {
+        "file": "src/app/max-weight/max-weight-routing.module.ts",
+        "hash": "8920582193627542870"
+      },
+      {
+        "file": "src/app/max-weight/max-weight.module.ts",
+        "hash": "8403350756320547380"
+      },
+      {
+        "file": "src/app/max-weight/max-weight.page.html",
+        "hash": "14904919555654682739"
+      },
+      {
+        "file": "src/app/max-weight/max-weight.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/max-weight/max-weight.page.ts",
+        "hash": "14719844041627828645"
       },
       {
         "file": "src/app/tab2/tab2-routing.module.ts",
@@ -201,32 +229,8 @@
         "hash": "1649071404575094014"
       },
       {
-        "file": "src/app/tab3/tab3-routing.module.ts",
-        "hash": "9012527419557272185"
-      },
-      {
-        "file": "src/app/tab3/tab3.module.ts",
-        "hash": "10502422086192062511"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.html",
-        "hash": "1640442279298071434"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.spec.ts",
-        "hash": "9818200618826629289"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.ts",
-        "hash": "9950996585213729156"
-      },
-      {
         "file": "src/app/tabs/tabs-routing.module.ts",
-        "hash": "7044889794849427242"
+        "hash": "7545593840954610584"
       },
       {
         "file": "src/app/tabs/tabs.module.ts",
@@ -234,7 +238,7 @@
       },
       {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "10354490750562014135"
+        "hash": "6060158627122077199"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",
