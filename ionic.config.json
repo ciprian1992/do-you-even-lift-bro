@@ -1,0 +1,7 @@
+{
+  "name": "DoYouEventLiftBro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
