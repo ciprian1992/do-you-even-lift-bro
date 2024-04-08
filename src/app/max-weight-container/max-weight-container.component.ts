@@ -1,9 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {
-  SegmentChangeEventDetail,
-  SegmentValue,
-  SegmentCustomEvent,
-} from '@ionic/angular';
+import { SegmentCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-max-weight-container',
