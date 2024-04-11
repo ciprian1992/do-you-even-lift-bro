@@ -6,6 +6,7 @@
     "@angular/common": "^17.0.2",
     "@angular/compiler": "^17.0.2",
     "@angular/core": "^17.0.2",
+    "@angular/fire": "^17.0.1",
     "@angular/forms": "^17.0.2",
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
@@ -65,6 +66,18 @@
         "hash": "18210278994710539225"
       },
       {
+        "file": ".firebaserc",
+        "hash": "15710783228981023122"
+      },
+      {
+        "file": ".github/workflows/firebase-hosting-merge.yml",
+        "hash": "1878332271647014660"
+      },
+      {
+        "file": ".github/workflows/firebase-hosting-pull-request.yml",
+        "hash": "7295685456050996058"
+      },
+      {
         "file": ".gitignore",
         "hash": "91109559695469517"
       },
@@ -83,6 +96,10 @@
       {
         "file": "capacitor.config.ts",
         "hash": "11727381956086536153"
+      },
+      {
+        "file": "firebase.json",
+        "hash": "3908608847556269758"
       },
       {
         "file": "ionic.config.json",
@@ -178,11 +195,11 @@
       },
       {
         "file": "src/app/max-weight-container/max-weight-container.component.ts",
-        "hash": "14748556672414932390"
+        "hash": "9691727179913216224"
       },
       {
         "file": "src/app/max-weight-container/max-weight-container.module.ts",
-        "hash": "9683709670576558729"
+        "hash": "4004892335051089235"
       },
       {
         "file": "src/app/max-weight/max-weight-routing.module.ts",
