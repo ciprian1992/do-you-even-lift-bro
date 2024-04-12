@@ -79,7 +79,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "91109559695469517"
+        "hash": "14555918630938920276"
       },
       {
         "file": ".vscode/extensions.json",
@@ -88,6 +88,14 @@
       {
         "file": ".vscode/settings.json",
         "hash": "1151538777131426085"
+      },
+      {
+        "file": "__azurite_db_queue__.json",
+        "hash": "1608103884870055548"
+      },
+      {
+        "file": "__azurite_db_queue_extent__.json",
+        "hash": "16706287902662333193"
       },
       {
         "file": "angular.json",
@@ -111,11 +119,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "209371391663513372"
+        "hash": "10382380626386476050"
       },
       {
         "file": "package.json",
-        "hash": "7423764146617213116"
+        "hash": "3638422292044057210"
       },
       {
         "file": "resources/icon.png",
@@ -127,7 +135,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "11801418085704297101"
+        "hash": "7508539794342002830"
       },
       {
         "file": "src/app/app.component.html",
@@ -147,7 +155,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "17195997832060172707"
+        "hash": "13252101048313010231"
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
@@ -186,6 +194,14 @@
         "hash": "7418061059857182964"
       },
       {
+        "file": "src/app/login/login.component.html",
+        "hash": "1105901700639660751"
+      },
+      {
+        "file": "src/app/login/login.component.ts",
+        "hash": "8130585455510401457"
+      },
+      {
         "file": "src/app/max-weight-container/max-weight-container.component.html",
         "hash": "441526641009643379"
       },
@@ -211,7 +227,7 @@
       },
       {
         "file": "src/app/max-weight/max-weight.page.html",
-        "hash": "14904919555654682739"
+        "hash": "2304696195025857714"
       },
       {
         "file": "src/app/max-weight/max-weight.page.scss",
@@ -219,7 +235,7 @@
       },
       {
         "file": "src/app/max-weight/max-weight.page.ts",
-        "hash": "14719844041627828645"
+        "hash": "1703291479452063262"
       },
       {
         "file": "src/app/tab2/tab2-routing.module.ts",
@@ -255,7 +271,7 @@
       },
       {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "6060158627122077199"
+        "hash": "11795722707008173365"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",

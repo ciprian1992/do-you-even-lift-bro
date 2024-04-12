@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Optional } from '@angular/core';
+import { Component, OnInit, OnDestroy, Optional, inject } from '@angular/core';
 import {
   Auth,
   authState,
@@ -14,6 +14,7 @@ import { EMPTY, Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { traceUntilFirst } from '@angular/fire/performance';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -24,6 +25,8 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent implements OnDestroy {
   private readonly userDisposable: Subscription | undefined;
   public readonly user: Observable<User | null> = EMPTY;
+
+  private readonly router = inject(Router);
 
   showLoginButton = false;
   showLogoutButton = false;
@@ -49,11 +52,11 @@ export class LoginComponent implements OnDestroy {
     }
   }
 
-  async login() {
-    return await signInWithRedirect(this.auth, new GoogleAuthProvider());
+  public login() {
+    return signInWithPopup(this.auth, new GoogleAuthProvider()).then(() =>
+      this.router.navigate(['tabs/max-weight'])
+    );
   }
 
-  async loginAnonymously() {
-    return await signInAnonymously(this.auth);
-  }
+  public loginAnonymously() {}
 }
