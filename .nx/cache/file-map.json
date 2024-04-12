@@ -2,51 +2,52 @@
   "version": "6.0",
   "nxVersion": "18.2.3",
   "deps": {
-    "@angular/animations": "^17.0.2",
-    "@angular/common": "^17.0.2",
-    "@angular/compiler": "^17.0.2",
-    "@angular/core": "^17.0.2",
+    "@angular/animations": "^17.3.4",
+    "@angular/common": "^17.3.4",
+    "@angular/compiler": "^17.3.4",
+    "@angular/core": "^17.3.4",
     "@angular/fire": "^17.0.1",
-    "@angular/forms": "^17.0.2",
-    "@angular/platform-browser": "^17.0.2",
-    "@angular/platform-browser-dynamic": "^17.0.2",
-    "@angular/router": "^17.0.2",
+    "@angular/forms": "^17.3.4",
+    "@angular/platform-browser": "^17.3.4",
+    "@angular/platform-browser-dynamic": "^17.3.4",
+    "@angular/router": "^17.3.4",
+    "@angular/service-worker": "^17.3.4",
     "@capacitor/app": "5.0.7",
     "@capacitor/core": "5.7.4",
     "@capacitor/haptics": "5.0.7",
     "@capacitor/keyboard": "5.0.8",
     "@capacitor/status-bar": "5.0.7",
-    "@ionic/angular": "^7.0.0",
-    "ionicons": "^7.0.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.2",
-    "@angular-devkit/build-angular": "^17.0.0",
-    "@angular-eslint/builder": "^17.0.0",
-    "@angular-eslint/eslint-plugin": "^17.0.0",
-    "@angular-eslint/eslint-plugin-template": "^17.0.0",
-    "@angular-eslint/schematics": "^17.0.0",
-    "@angular-eslint/template-parser": "^17.0.0",
-    "@angular/cli": "^17.0.0",
-    "@angular/compiler-cli": "^17.0.2",
-    "@angular/language-service": "^17.0.2",
+    "@ionic/angular": "^7.8.4",
+    "ionicons": "^7.3.1",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.6.2",
+    "zone.js": "~0.14.4",
+    "@angular-devkit/build-angular": "^17.3.4",
+    "@angular-eslint/builder": "^17.3.0",
+    "@angular-eslint/eslint-plugin": "^17.3.0",
+    "@angular-eslint/eslint-plugin-template": "^17.3.0",
+    "@angular-eslint/schematics": "^17.3.0",
+    "@angular-eslint/template-parser": "^17.3.0",
+    "@angular/cli": "^17.3.4",
+    "@angular/compiler-cli": "^17.3.4",
+    "@angular/language-service": "^17.3.4",
     "@capacitor/cli": "5.7.4",
     "@ionic/angular-toolkit": "^11.0.1",
-    "@types/jasmine": "~5.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@types/jasmine": "~5.1.4",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.2.1",
-    "eslint-plugin-prefer-arrow": "1.2.2",
-    "jasmine-core": "~5.1.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.4.0",
+    "eslint-plugin-jsdoc": "^48.2.3",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "jasmine-core": "~5.1.2",
+    "jasmine-spec-reporter": "~7.0.0",
+    "karma": "~6.4.3",
     "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
+    "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.4.5"
   },
   "pathMappings": {},
   "nxJsonPlugins": [],
@@ -98,8 +99,12 @@
         "hash": "16706287902662333193"
       },
       {
+        "file": "__azurite_db_table__.json",
+        "hash": "3399739388529046128"
+      },
+      {
         "file": "angular.json",
-        "hash": "14983276163348353732"
+        "hash": "5097193443422822513"
       },
       {
         "file": "capacitor.config.ts",
@@ -118,12 +123,16 @@
         "hash": "13719387092471133633"
       },
       {
+        "file": "ngsw-config.json",
+        "hash": "17103502601035726840"
+      },
+      {
         "file": "package-lock.json",
-        "hash": "10382380626386476050"
+        "hash": "12955948814910126031"
       },
       {
         "file": "package.json",
-        "hash": "3638422292044057210"
+        "hash": "6572280603401122402"
       },
       {
         "file": "resources/icon.png",
@@ -155,7 +164,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "13252101048313010231"
+        "hash": "18142725100992366986"
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
@@ -199,7 +208,7 @@
       },
       {
         "file": "src/app/login/login.component.ts",
-        "hash": "8130585455510401457"
+        "hash": "13770428565284822811"
       },
       {
         "file": "src/app/max-weight-container/max-weight-container.component.html",
@@ -290,6 +299,38 @@
         "hash": "17482944836898362639"
       },
       {
+        "file": "src/assets/icons/icon-128x128.png",
+        "hash": "16119513566521364320"
+      },
+      {
+        "file": "src/assets/icons/icon-144x144.png",
+        "hash": "7918264055681161054"
+      },
+      {
+        "file": "src/assets/icons/icon-152x152.png",
+        "hash": "15801439294603939434"
+      },
+      {
+        "file": "src/assets/icons/icon-192x192.png",
+        "hash": "5426725225393538606"
+      },
+      {
+        "file": "src/assets/icons/icon-384x384.png",
+        "hash": "14349113523743396697"
+      },
+      {
+        "file": "src/assets/icons/icon-512x512.png",
+        "hash": "15496412176428542718"
+      },
+      {
+        "file": "src/assets/icons/icon-72x72.png",
+        "hash": "8211841038932698272"
+      },
+      {
+        "file": "src/assets/icons/icon-96x96.png",
+        "hash": "17857169027528193372"
+      },
+      {
         "file": "src/assets/shapes.svg",
         "hash": "4708889011185296100"
       },
@@ -307,11 +348,15 @@
       },
       {
         "file": "src/index.html",
-        "hash": "5962093970713772175"
+        "hash": "5564573870545453743"
       },
       {
         "file": "src/main.ts",
         "hash": "3447864527603543144"
+      },
+      {
+        "file": "src/manifest.webmanifest",
+        "hash": "12720614458752744997"
       },
       {
         "file": "src/polyfills.ts",
