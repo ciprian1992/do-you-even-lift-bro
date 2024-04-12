@@ -1,8 +1,11 @@
-<p>
-  Auth!
-  <code>{{ (user | async)?.uid }}</code>
-  <button (click)="login()" *ngIf="showLoginButton">Log in with Google</button>
-  <button (click)="loginAnonymously()" *ngIf="showLoginButton">
-    Log in anonymously
-  </button>
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Do you even lift bro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content">
+    <ion-button (click)="login()">Login with Google</ion-button>
+  </div>
+</ion-content>

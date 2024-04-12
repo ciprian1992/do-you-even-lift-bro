@@ -15,12 +15,30 @@ import { map } from 'rxjs/operators';
 import { traceUntilFirst } from '@angular/fire/performance';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import {
+  IonContent,
+  IonButton,
+  IonTitle,
+  IonButtons,
+  IonToolbar,
+  IonHeader,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   standalone: true,
-  imports: [AuthModule, CommonModule],
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonTitle,
+    IonButton,
+    IonContent,
+    AuthModule,
+    CommonModule,
+  ],
 })
 export class LoginComponent implements OnDestroy {
   private readonly userDisposable: Subscription | undefined;
@@ -57,6 +75,4 @@ export class LoginComponent implements OnDestroy {
       this.router.navigate(['tabs/max-weight'])
     );
   }
-
-  public loginAnonymously() {}
 }
