@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Add Max Weight</ion-title>
+    <ion-buttons (click)="closeModal()" slot="end">
+      <ion-button [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-select
+        interface="action-sheet"
+        label="Muscle group"
+        placeholder="Select muscle group"
+      >
+        <ion-select-option value="push">Push</ion-select-option>
+        <ion-select-option value="pull">Pull</ion-select-option>
+        <ion-select-option value="legs">Legs</ion-select-option>
+        <ion-select-option value="abs">Abs</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select
+        interface="action-sheet"
+        label="Exercise type"
+        placeholder="Select exercise type"
+      >
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option value="banana">Banana</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Enter weight"
+        labelPlacement="stacked"
+        type="number"
+        placeholder="Weight in KG"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>

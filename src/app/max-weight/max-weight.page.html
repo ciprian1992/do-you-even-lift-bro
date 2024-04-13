@@ -21,4 +21,10 @@
 
 <ion-content id="main-content" [fullscreen]="true">
   <app-max-weight-container></app-max-weight-container>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="openAddEditModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

@@ -112,7 +112,7 @@
       },
       {
         "file": "firebase.json",
-        "hash": "3908608847556269758"
+        "hash": "8342142270096104094"
       },
       {
         "file": "ionic.config.json",
@@ -164,7 +164,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "18142725100992366986"
+        "hash": "14948696541337286095"
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
@@ -204,11 +204,15 @@
       },
       {
         "file": "src/app/login/login.component.html",
-        "hash": "1105901700639660751"
+        "hash": "15208561210055837767"
+      },
+      {
+        "file": "src/app/login/login.component.scss",
+        "hash": "810267624860766545"
       },
       {
         "file": "src/app/login/login.component.ts",
-        "hash": "13770428565284822811"
+        "hash": "5936082597973008393"
       },
       {
         "file": "src/app/max-weight-container/max-weight-container.component.html",
@@ -247,32 +251,12 @@
         "hash": "1703291479452063262"
       },
       {
-        "file": "src/app/tab2/tab2-routing.module.ts",
-        "hash": "7350080520046749647"
-      },
-      {
-        "file": "src/app/tab2/tab2.module.ts",
-        "hash": "15372332323707330095"
-      },
-      {
-        "file": "src/app/tab2/tab2.page.html",
-        "hash": "13340392613393970086"
-      },
-      {
-        "file": "src/app/tab2/tab2.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/tab2/tab2.page.spec.ts",
-        "hash": "8406418330988075840"
-      },
-      {
-        "file": "src/app/tab2/tab2.page.ts",
-        "hash": "1649071404575094014"
+        "file": "src/app/services/prompt-update.service.ts",
+        "hash": "10569679166519634417"
       },
       {
         "file": "src/app/tabs/tabs-routing.module.ts",
-        "hash": "7545593840954610584"
+        "hash": "7203148398153348567"
       },
       {
         "file": "src/app/tabs/tabs.module.ts",
@@ -280,7 +264,7 @@
       },
       {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "11795722707008173365"
+        "hash": "12667442340475124457"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",
