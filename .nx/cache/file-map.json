@@ -18,7 +18,9 @@
     "@capacitor/keyboard": "5.0.8",
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.8.4",
+    "firebase": "^10.11.0",
     "ionicons": "^7.3.1",
+    "rxfire": "^6.0.5",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.4",
@@ -143,6 +145,22 @@
         "hash": "9879059061411778666"
       },
       {
+        "file": "src/app/add-edit-max-wieght-modal/add-edit-max-weight-modal.component.html",
+        "hash": "210912022034259176"
+      },
+      {
+        "file": "src/app/add-edit-max-wieght-modal/add-edit-max-weight-modal.component.ts",
+        "hash": "14671330162346505080"
+      },
+      {
+        "file": "src/app/add-edit-max-wieght-modal/exercises.const.ts",
+        "hash": "510972856981145665"
+      },
+      {
+        "file": "src/app/add-edit-max-wieght-modal/musle-groups.const.ts",
+        "hash": "17942575869932815146"
+      },
+      {
         "file": "src/app/app-routing.module.ts",
         "hash": "7508539794342002830"
       },
@@ -168,7 +186,7 @@
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
-        "hash": "17667512653906509614"
+        "hash": "7122853121532874362"
       },
       {
         "file": "src/app/exercises-container/exercises-container.module.ts",
@@ -181,26 +199,6 @@
       {
         "file": "src/app/exercises-container/explore-container.component.scss",
         "hash": "14250411118003398491"
-      },
-      {
-        "file": "src/app/explore-container/explore-container.component.html",
-        "hash": "10574455846506954855"
-      },
-      {
-        "file": "src/app/explore-container/explore-container.component.scss",
-        "hash": "14250411118003398491"
-      },
-      {
-        "file": "src/app/explore-container/explore-container.component.spec.ts",
-        "hash": "5993597563574967271"
-      },
-      {
-        "file": "src/app/explore-container/explore-container.component.ts",
-        "hash": "5919589360752874304"
-      },
-      {
-        "file": "src/app/explore-container/explore-container.module.ts",
-        "hash": "7418061059857182964"
       },
       {
         "file": "src/app/login/login.component.html",
@@ -232,15 +230,15 @@
       },
       {
         "file": "src/app/max-weight/max-weight-routing.module.ts",
-        "hash": "8920582193627542870"
+        "hash": "2585203152345953250"
       },
       {
         "file": "src/app/max-weight/max-weight.module.ts",
-        "hash": "8403350756320547380"
+        "hash": "9685413599278007264"
       },
       {
         "file": "src/app/max-weight/max-weight.page.html",
-        "hash": "2304696195025857714"
+        "hash": "4049187354773600994"
       },
       {
         "file": "src/app/max-weight/max-weight.page.scss",
@@ -248,7 +246,7 @@
       },
       {
         "file": "src/app/max-weight/max-weight.page.ts",
-        "hash": "1703291479452063262"
+        "hash": "9171034437379181023"
       },
       {
         "file": "src/app/services/prompt-update.service.ts",
