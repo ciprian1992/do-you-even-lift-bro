@@ -3,8 +3,16 @@ import { Auth, signOut, user } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { User } from 'firebase/auth';
-import { map } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { AddEditMaxWeightModalComponent } from '../add-edit-max-wieght-modal/add-edit-max-weight-modal.component';
+import { doc } from 'rxfire/firestore';
+
+import {
+  Firestore,
+  collection,
+  collectionData,
+  getFirestore,
+} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-max-weight',
@@ -17,11 +25,25 @@ export class MaxWeightPage {
   private modalController = inject(ModalController);
 
   public user$ = user(this.auth);
-  public userName$;
+  public userName$ = this.user$.pipe(
+    map((user) => user?.email || user?.displayName || 'Unknown')
+  );
+  public exercises$;
+
+  private firestore = inject(Firestore);
+  private userId$ = this.user$.pipe(map((user) => user?.uid ?? ''));
 
   constructor() {
     this.userName$ = this.user$.pipe(
       map((user) => user?.email || user?.displayName || 'Unknown')
+    );
+
+    this.exercises$ = this.userId$.pipe(
+      map((userId) => {
+        return collection(getFirestore(), `users/${userId}/max-weights`);
+      }),
+      switchMap((collection) => collectionData(collection)),
+      tap(console.log)
     );
   }
 
@@ -36,4 +58,6 @@ export class MaxWeightPage {
       })
       .then((modal) => modal.present());
   }
+
+  //get max-weight for user
 }
