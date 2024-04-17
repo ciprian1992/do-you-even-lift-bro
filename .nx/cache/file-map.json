@@ -130,11 +130,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "12955948814910126031"
+        "hash": "11952133259747643594"
       },
       {
         "file": "package.json",
-        "hash": "6572280603401122402"
+        "hash": "9105769906603934665"
       },
       {
         "file": "resources/icon.png",
@@ -146,11 +146,11 @@
       },
       {
         "file": "src/app/add-edit-max-wieght-modal/add-edit-max-weight-modal.component.html",
-        "hash": "210912022034259176"
+        "hash": "18398517703318379757"
       },
       {
         "file": "src/app/add-edit-max-wieght-modal/add-edit-max-weight-modal.component.ts",
-        "hash": "14671330162346505080"
+        "hash": "4690853756277516630"
       },
       {
         "file": "src/app/add-edit-max-wieght-modal/exercises.const.ts",
@@ -182,7 +182,15 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "14948696541337286095"
+        "hash": "4214053035963695097"
+      },
+      {
+        "file": "src/app/domain/index.ts",
+        "hash": "15325287584659624945"
+      },
+      {
+        "file": "src/app/domain/max-weight.interface.ts",
+        "hash": "13050094060215688501"
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
@@ -246,7 +254,7 @@
       },
       {
         "file": "src/app/max-weight/max-weight.page.ts",
-        "hash": "9171034437379181023"
+        "hash": "3600908946798518347"
       },
       {
         "file": "src/app/services/prompt-update.service.ts",

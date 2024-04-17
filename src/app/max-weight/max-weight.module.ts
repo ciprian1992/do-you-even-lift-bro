@@ -5,16 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { MaxWeightPage } from './max-weight.page';
 
 import { MaxWeightPageRoutingModule } from './max-weight-routing.module';
-import { MaxWeightContainerComponentModule } from '../max-weight-container/max-weight-container.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    MaxWeightContainerComponentModule,
+    MaxWeightPage,
     MaxWeightPageRoutingModule,
   ],
-  declarations: [MaxWeightPage],
+  declarations: [],
 })
 export class MaxWeightPageModule {}

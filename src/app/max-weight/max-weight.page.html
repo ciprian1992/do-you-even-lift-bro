@@ -20,7 +20,31 @@
 </ion-header>
 
 <ion-content id="main-content" [fullscreen]="true">
-  <app-max-weight-container></app-max-weight-container>
+  <ion-segment (ionChange)="exerciseTypeChanged($event)" value="pull">
+    <ion-segment-button value="pull">
+      <ion-label>Pull</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="push">
+      <ion-label>Push</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="legs">
+      <ion-label>Legs</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="abs">
+      <ion-label>Abs</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list>
+    <ion-item *ngFor="let maxWeight of maxWeights$ | async">
+      <ion-label>
+        <h2>{{maxWeight| appExercise}}</h2>
+        <h2 *ngIf="maxWeight">{{maxWeight.maxWeight}}kg</h2>
+        <h2 *ngIf="maxWeight.reps">Reps: {{maxWeight.reps}}</h2>
+        <h2 *ngIf="maxWeight.info">{{maxWeight.info}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button (click)="openAddEditModal()">

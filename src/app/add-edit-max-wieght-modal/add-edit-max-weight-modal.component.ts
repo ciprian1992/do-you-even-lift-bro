@@ -90,7 +90,7 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
 
           return from(
             addDoc(collectionRef, {
-              name: formGroup.exercise,
+              exercise: formGroup.exercise,
               muscleGroup: formGroup.muscleGroup,
               maxWeight: formGroup.maxWeight,
               reps: formGroup.reps,
