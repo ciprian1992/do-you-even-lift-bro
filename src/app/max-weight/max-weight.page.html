@@ -20,7 +20,7 @@
 </ion-header>
 
 <ion-content id="main-content" [fullscreen]="true">
-  <ion-segment (ionChange)="exerciseTypeChanged($event)" value="pull">
+  <ion-segment (ionChange)="muscleGroupChanged($event)" value="pull">
     <ion-segment-button value="pull">
       <ion-label>Pull</ion-label>
     </ion-segment-button>
@@ -41,8 +41,15 @@
         <h2>{{maxWeight| appExercise}}</h2>
         <h2 *ngIf="maxWeight">{{maxWeight.maxWeight}}kg</h2>
         <h2 *ngIf="maxWeight.reps">Reps: {{maxWeight.reps}}</h2>
+        <h2 *ngIf="maxWeight.date">
+          {{maxWeight.date.toDate() | date: 'dd MMM YYYY'}}
+        </h2>
         <h2 *ngIf="maxWeight.info">{{maxWeight.info}}</h2>
       </ion-label>
+      <div class="icons">
+        <ion-icon (click)="openAddEditModal()" name="create-outline"></ion-icon>
+        <ion-icon (click)="openAddEditModal()" name="trash-outline"></ion-icon>
+      </div>
     </ion-item>
   </ion-list>
 

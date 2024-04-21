@@ -2,3 +2,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 16px;
+  gap: 16px;
+  font-size: 20px;
+}

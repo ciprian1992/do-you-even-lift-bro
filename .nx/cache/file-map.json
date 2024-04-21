@@ -150,7 +150,7 @@
       },
       {
         "file": "src/app/add-edit-max-wieght-modal/add-edit-max-weight-modal.component.ts",
-        "hash": "4690853756277516630"
+        "hash": "8461003956116793310"
       },
       {
         "file": "src/app/add-edit-max-wieght-modal/exercises.const.ts",
@@ -185,12 +185,16 @@
         "hash": "4214053035963695097"
       },
       {
+        "file": "src/app/domain/exercise.interface.ts",
+        "hash": "3244421341483603138"
+      },
+      {
         "file": "src/app/domain/index.ts",
         "hash": "15325287584659624945"
       },
       {
         "file": "src/app/domain/max-weight.interface.ts",
-        "hash": "13050094060215688501"
+        "hash": "12753942995178893589"
       },
       {
         "file": "src/app/exercises-container/exercises-container.component.ts",
@@ -221,20 +225,8 @@
         "hash": "5936082597973008393"
       },
       {
-        "file": "src/app/max-weight-container/max-weight-container.component.html",
-        "hash": "441526641009643379"
-      },
-      {
-        "file": "src/app/max-weight-container/max-weight-container.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/max-weight-container/max-weight-container.component.ts",
-        "hash": "9691727179913216224"
-      },
-      {
-        "file": "src/app/max-weight-container/max-weight-container.module.ts",
-        "hash": "4004892335051089235"
+        "file": "src/app/max-weight/exercise.pipe.ts",
+        "hash": "17510585535433301384"
       },
       {
         "file": "src/app/max-weight/max-weight-routing.module.ts",
@@ -242,19 +234,19 @@
       },
       {
         "file": "src/app/max-weight/max-weight.module.ts",
-        "hash": "9685413599278007264"
+        "hash": "7196216151457788363"
       },
       {
         "file": "src/app/max-weight/max-weight.page.html",
-        "hash": "4049187354773600994"
+        "hash": "1413182494639343471"
       },
       {
         "file": "src/app/max-weight/max-weight.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "12439631892601314275"
       },
       {
         "file": "src/app/max-weight/max-weight.page.ts",
-        "hash": "3600908946798518347"
+        "hash": "2047495902154882709"
       },
       {
         "file": "src/app/services/prompt-update.service.ts",

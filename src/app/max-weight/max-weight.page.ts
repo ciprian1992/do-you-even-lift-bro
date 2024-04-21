@@ -6,20 +6,25 @@ import {
   ModalController,
   SegmentCustomEvent,
 } from '@ionic/angular';
-import { User } from 'firebase/auth';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { AddEditMaxWeightModalComponent } from '../add-edit-max-wieght-modal/add-edit-max-weight-modal.component';
-import { doc } from 'rxfire/firestore';
 
 import {
   Firestore,
   collection,
   collectionData,
+  docSnapshots,
+  getDocs,
   getFirestore,
+  orderBy,
+  query,
+  where,
 } from '@angular/fire/firestore';
 import { MaxWeight } from '../domain';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgSwitchDefault } from '@angular/common';
 import { ExercisePipe } from './exercise.pipe';
+import { BehaviorSubject, Observable, combineLatest } from 'rxjs';
+import { MuscleGroup } from '../add-edit-max-wieght-modal/musle-groups.const';
 
 @Component({
   selector: 'app-max-weight',
@@ -39,8 +44,9 @@ export class MaxWeightPage {
   );
   public maxWeights$;
 
-  private firestore = inject(Firestore);
+  private muscleGroupSubject = new BehaviorSubject<MuscleGroup>('pull');
   private userId$ = this.user$.pipe(map((user) => user?.uid ?? ''));
+  private firestore = inject(Firestore);
 
   constructor() {
     this.userName$ = this.user$.pipe(
@@ -49,16 +55,28 @@ export class MaxWeightPage {
 
     // To investigate
 
-    this.maxWeights$ = this.userId$.pipe(
-      map((userId) => {
-        return collection(getFirestore(), `users/${userId}/max-weights`);
-      }),
-      switchMap((collection) => collectionData<MaxWeight>(collection as any)), // Add type assertion here
-      tap(console.log)
+    this.maxWeights$ = combineLatest([
+      this.userId$,
+      this.muscleGroupSubject,
+    ]).pipe(
+      switchMap(([userId, muscleGroup]) => {
+        const ref = collection(getFirestore(), `users/${userId}/max-weights`);
+
+        const q = query(ref, where('muscleGroup', '==', muscleGroup));
+
+        const sortedQ = query(
+          ref,
+          where('muscleGroup', '==', muscleGroup),
+          orderBy('date', 'desc')
+        );
+        return collectionData(sortedQ) as Observable<MaxWeight[]>;
+      })
     );
   }
 
-  public exerciseTypeChanged(event: SegmentCustomEvent): void {}
+  public muscleGroupChanged(event: SegmentCustomEvent): void {
+    this.muscleGroupSubject.next(event.detail.value as MuscleGroup);
+  }
 
   public async logout() {
     signOut(this.auth).then(() => this.router.navigate(['login']));
