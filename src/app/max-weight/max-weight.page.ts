@@ -6,7 +6,7 @@ import {
   ModalController,
   SegmentCustomEvent,
 } from '@ionic/angular';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { map, shareReplay, switchMap, tap } from 'rxjs/operators';
 import { AddEditMaxWeightModalComponent } from '../add-edit-max-wieght-modal/add-edit-max-weight-modal.component';
 
 import {
@@ -46,14 +46,12 @@ export class MaxWeightPage {
 
   private muscleGroupSubject = new BehaviorSubject<MuscleGroup>('pull');
   private userId$ = this.user$.pipe(map((user) => user?.uid ?? ''));
-  private firestore = inject(Firestore);
 
   constructor() {
     this.userName$ = this.user$.pipe(
-      map((user) => user?.email || user?.displayName || 'Unknown')
+      map((user) => user?.email || user?.displayName || 'Unknown'),
+      shareReplay(1)
     );
-
-    // To investigate
 
     this.maxWeights$ = combineLatest([
       this.userId$,
@@ -69,8 +67,11 @@ export class MaxWeightPage {
           where('muscleGroup', '==', muscleGroup),
           orderBy('date', 'desc')
         );
-        return collectionData(sortedQ) as Observable<MaxWeight[]>;
-      })
+        return collectionData(sortedQ, { idField: 'id' }) as Observable<
+          MaxWeight[]
+        >;
+      }),
+      shareReplay(1)
     );
   }
 
@@ -82,7 +83,26 @@ export class MaxWeightPage {
     signOut(this.auth).then(() => this.router.navigate(['login']));
   }
 
-  public openAddEditModal() {
+  public openAddModal() {
+    this.modalController
+      .create({
+        component: AddEditMaxWeightModalComponent,
+      })
+      .then((modal) => modal.present());
+  }
+
+  public openEditModal(id: string) {
+    this.modalController
+      .create({
+        component: AddEditMaxWeightModalComponent,
+        componentProps: {
+          id,
+        },
+      })
+      .then((modal) => modal.present());
+  }
+
+  public openDeleteModal() {
     this.modalController
       .create({
         component: AddEditMaxWeightModalComponent,

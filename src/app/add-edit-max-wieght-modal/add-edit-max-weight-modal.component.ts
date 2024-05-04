@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import { IonicModule, ModalController } from '@ionic/angular';
 import { MuscleGroup, muscleGroups } from './musle-groups.const';
 import { CommonModule } from '@angular/common';
@@ -17,13 +17,22 @@ import {
   of,
   shareReplay,
   switchMap,
+  take,
   withLatestFrom,
 } from 'rxjs';
 import { Exercise, EXERCISES } from './exercises.const';
 
 import { from } from 'rxjs';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import {
+  Firestore,
+  collection,
+  addDoc,
+  docSnapshots,
+  doc,
+  updateDoc,
+} from '@angular/fire/firestore';
 import { Auth, user } from '@angular/fire/auth';
+import { MaxWeight } from '../domain';
 
 @Component({
   selector: 'app-add-edit-max-weight-modal',
@@ -32,10 +41,12 @@ import { Auth, user } from '@angular/fire/auth';
   imports: [CommonModule, IonicModule, ReactiveFormsModule],
 })
 export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
+  @Input() public id?: string;
+
   public MUSCLE_GROUPS = muscleGroups;
   public formGroup = new FormGroup({
     muscleGroup: new FormControl<MuscleGroup | null>(null, Validators.required),
-    exercise: new FormControl(null, Validators.required),
+    exercise: new FormControl<string | null>(null, Validators.required),
     maxWeight: new FormControl(),
     reps: new FormControl(),
     info: new FormControl(''),
@@ -59,7 +70,11 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
     );
   }
   public ngOnInit(): void {
-    this.subscriptions.add(this.closeOnAddEdit());
+    if (this.id) {
+      this.subscriptions.add(this.initializeFormsOnEdit(this.id));
+    }
+
+    this.subscriptions.add(this.closeOnSave());
   }
 
   public ngOnDestroy(): void {
@@ -76,7 +91,7 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
     this.modalCtrl.dismiss();
   }
 
-  private closeOnAddEdit(): Subscription {
+  private closeOnSave(): Subscription {
     return this.confirmSubject
       .pipe(
         withLatestFrom(this.formGroup.valueChanges, this.userId$),
@@ -88,6 +103,20 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
             'max-weights'
           );
 
+          if (this.id) {
+            const docRef = doc(collectionRef, this.id);
+            return from(
+              updateDoc(docRef, {
+                exercise: formGroup.exercise,
+                muscleGroup: formGroup.muscleGroup,
+                maxWeight: formGroup.maxWeight,
+                reps: formGroup.reps,
+                info: formGroup.info,
+                date: new Date(),
+              })
+            );
+          }
+
           return from(
             addDoc(collectionRef, {
               exercise: formGroup.exercise,
@@ -96,11 +125,37 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
               reps: formGroup.reps,
               info: formGroup.info,
               date: new Date(),
-              // other fields
             })
           );
         })
       )
       .subscribe(() => this.modalCtrl.dismiss());
+  }
+
+  private initializeFormsOnEdit(maxWeightId: string): Subscription {
+    return this.userId$
+      .pipe(
+        switchMap((userId) => {
+          const docRef = doc(
+            collection(this.firestore, 'users', userId, 'max-weights'),
+            maxWeightId
+          );
+
+          return docSnapshots(docRef);
+        }),
+        map((doc) => doc.data() as MaxWeight | null),
+        take(1)
+      )
+      .subscribe((maxWeight: MaxWeight | null) => {
+        if (maxWeight) {
+          this.formGroup.patchValue({
+            muscleGroup: maxWeight.muscleGroup,
+            exercise: maxWeight.exercise,
+            maxWeight: maxWeight.maxWeight,
+            reps: maxWeight.reps,
+            info: maxWeight.info,
+          });
+        }
+      });
   }
 }

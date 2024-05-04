@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-button (click)="closeModal()">Cancel</ion-button>
     </ion-buttons>
-    <ion-title>Add Max Weight</ion-title>
+    <ion-title>{{ id ? "Edit Max Weight" : "Add Max Weight" }}</ion-title>
     <ion-buttons (click)="confirm()" slot="end">
       <ion-button [strong]="true">Confirm</ion-button>
     </ion-buttons>
