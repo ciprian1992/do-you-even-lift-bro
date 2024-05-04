@@ -48,16 +48,19 @@
       </ion-label>
       <div class="icons">
         <ion-icon
-          (click)="openEditModal(maxWeight.id)"
+          (click)="onAddEditClick(maxWeight.id)"
           name="create-outline"
         ></ion-icon>
-        <ion-icon (click)="openDeleteModal()" name="trash-outline"></ion-icon>
+        <ion-icon
+          (click)="onDeleteClick(maxWeight.id)"
+          name="trash-outline"
+        ></ion-icon>
       </div>
     </ion-item>
   </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button (click)="openAddModal()">
+    <ion-fab-button (click)="onAddEditClick()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
