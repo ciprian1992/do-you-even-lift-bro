@@ -15,6 +15,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'exercises',
+        loadChildren: () =>
+          import('../exercises/exercises.module').then(
+            (m) => m.ExercisesPageModule
+          ),
+      },
+      {
         path: '',
         redirectTo: '/tabs/max-weight',
         pathMatch: 'full',

@@ -1,0 +1,40 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>User</ion-title>
+      <ion-text>{{userName$ | async}}</ion-text>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"
+    ><ion-button (click)="logout()">Logout</ion-button></ion-content
+  >
+</ion-menu>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Exercises </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-segment value="pull1">
+    <ion-segment-button value="pull1">
+      <ion-label>Pull 1</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="pull2">
+      <ion-label>Pull 2</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="push1">
+      <ion-label>Push 1</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="push2">
+      <ion-label>Push 2</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="legs">
+      <ion-label>Legs</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>
