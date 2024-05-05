@@ -20,7 +20,7 @@
 </ion-header>
 
 <ion-content id="main-content" [fullscreen]="true">
-  <ion-segment value="pull1">
+  <ion-segment (ionChange)="exerciseTypeChanged($event)" value="push1">
     <ion-segment-button value="pull1">
       <ion-label>Pull 1</ion-label>
     </ion-segment-button>
@@ -37,4 +37,12 @@
       <ion-label>Legs</ion-label>
     </ion-segment-button>
   </ion-segment>
+
+  <ion-list>
+    <ion-item *ngFor="let exercise of exercises$ | async">
+      <ion-label>
+        <h2>{{ exercise.name }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

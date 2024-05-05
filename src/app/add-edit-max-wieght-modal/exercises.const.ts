@@ -1,8 +1,49 @@
 import { MuscleGroup } from './musle-groups.const';
 
+export type exerciseValue =
+  | 'barbell-deadlift'
+  | 'chest-supporter-row'
+  | 'db-lat-pullover'
+  | 'db-high-pulls'
+  | 'biceps-chin-curls'
+  | 'angels-and-devils'
+  | 'snatch-grip-deadlift'
+  | 'weighted-pull-ups'
+  | 'alt-db-gorilla-rows'
+  | 'straight-arm-pushdowns'
+  | 'barbell-curls'
+  | 'ez-curls'
+  | 'face-pulls'
+  | 'db-waiters-curls'
+  | 'db-curl-of-choice'
+  | 'barbell-bench-press'
+  | 'hi-to-low-crossovers'
+  | 'db-shoulder-press'
+  | '1-1-2-side-lateral-raises'
+  | 'lying-tricep-extensions'
+  | 'rotator-cuff-external-rotations'
+  | 'barbel-ohp'
+  | 'underhead-db-bench-press'
+  | 'db-abduction-rows'
+  | 'db-floor-flys'
+  | 'close-grip-bench-press'
+  | 'pushup-plus'
+  | 'overhead-tricep-extension'
+  | 'triceps-pushdowns'
+  | 'barbell-squats'
+  | 'barbel-hip-thrusts'
+  | 'barbel-alternating-reverse-lunges'
+  | 'db-alternating-reverse-lunges'
+  | 'db-single-leg-rdls'
+  | 'slick floor bridge curls'
+  | 'standing-db-calf-raises'
+  | 'seated-db-calf-raises'
+  | 'side-abs'
+  | 'cruncher';
+
 export interface Exercise {
   name: string;
-  value: string;
+  value: exerciseValue;
 }
 
 export const EXERCISES = new Map<MuscleGroup, Exercise[]>([
@@ -10,7 +51,10 @@ export const EXERCISES = new Map<MuscleGroup, Exercise[]>([
     'pull',
     [
       { name: 'Barbell deadlift', value: 'barbell-deadlift' },
-      { name: 'Chest supporter row', value: 'chest-supporter-row' },
+      {
+        name: 'Chest supporter row',
+        value: 'chest-supporter-row',
+      },
       { name: 'Db lat pullover', value: 'db-lat-pullover' },
       { name: 'Db high pulls', value: 'db-high-pulls' },
       { name: 'Biceps chin curls', value: 'biceps-chin-curls' },
