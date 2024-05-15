@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>{{ exercise?.name }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="exercise">
+    <ion-img [src]="exerciseImage"></ion-img>
+  </div>
+</ion-content>

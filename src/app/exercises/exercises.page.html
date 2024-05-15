@@ -40,7 +40,7 @@
 
   <ion-list>
     <ion-item *ngFor="let exercise of exercises$ | async">
-      <ion-label>
+      <ion-label (click)="onExerciseClick(exercise)">
         <h2>{{ exercise.name }}</h2>
       </ion-label>
     </ion-item>
