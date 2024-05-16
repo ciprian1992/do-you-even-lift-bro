@@ -14,7 +14,11 @@ import {
   switchMap,
   withLatestFrom,
 } from 'rxjs';
-import { exerciseType, exercisesMap } from './exercises.const';
+import {
+  ExerciseWithInfo,
+  exerciseType,
+  exercisesMap,
+} from './exercises.const';
 import {
   Exercise,
   exerciseValue,
@@ -32,7 +36,7 @@ export class ExercisesPage implements OnInit, OnDestroy {
   private auth = inject(Auth);
   private router = inject(Router);
   private exerciseTypeSubject = new BehaviorSubject<exerciseType>('push1');
-  private exerciseClickSubject = new Subject<Exercise>();
+  private exerciseClickSubject = new Subject<ExerciseWithInfo>();
   private modalController = inject(ModalController);
   private subscriptions = new Subscription();
 
@@ -40,7 +44,7 @@ export class ExercisesPage implements OnInit, OnDestroy {
   public userName$ = this.user$.pipe(
     map((user) => user?.email || user?.displayName || 'Unknown')
   );
-  public exercises$: Observable<Exercise[]>;
+  public exercises$: Observable<ExerciseWithInfo[]>;
 
   constructor() {
     this.exercises$ = this.exerciseTypeSubject.pipe(
@@ -64,7 +68,7 @@ export class ExercisesPage implements OnInit, OnDestroy {
     this.exerciseTypeSubject.next(event.detail.value as exerciseType);
   }
 
-  public onExerciseClick(exercise: Exercise): void {
+  public onExerciseClick(exercise: ExerciseWithInfo): void {
     this.exerciseClickSubject.next(exercise);
   }
 
@@ -78,7 +82,6 @@ export class ExercisesPage implements OnInit, OnDestroy {
               component: ExerciseModalComponent,
               componentProps: {
                 exercise,
-                exerciseType,
               },
             })
           )

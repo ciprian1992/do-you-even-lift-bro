@@ -35,7 +35,7 @@ export type exerciseValue =
   | 'barbel-alternating-reverse-lunges'
   | 'db-alternating-reverse-lunges'
   | 'db-single-leg-rdls'
-  | 'slick floor bridge curls'
+  | 'slick-floor-bridge-curls'
   | 'standing-db-calf-raises'
   | 'seated-db-calf-raises'
   | 'side-abs'
@@ -114,7 +114,7 @@ export const EXERCISES = new Map<MuscleGroup, Exercise[]>([
       },
       {
         name: 'Slick floor bridge curls',
-        value: 'slick floor bridge curls',
+        value: 'slick-floor-bridge-curls',
       },
       {
         name: 'Standing db calf raises',
