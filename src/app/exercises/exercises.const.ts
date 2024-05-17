@@ -76,7 +76,7 @@ const push2: ExerciseWithInfo[] = [
   {
     name: 'Db curl of choice (Superset with Close grip brench press)',
     value: 'db-curl-of-choice',
-    imageUrl: 'assets/exercises/push2/close-grip-bench-press.gif',
+    imageUrl: 'assets/exercises/push2/db-curl-of-choice.gif',
   },
   {
     name: 'Pushup plus',
@@ -102,9 +102,9 @@ const pull1: ExerciseWithInfo[] = [
     imageUrl: 'assets/exercises/pull1/db-lat-pullover.gif',
   },
   {
-    name: 'Chest supporter row',
-    value: 'chest-supporter-row',
-    imageUrl: 'assets/exercises/pull1/chest-supporter-row.gif',
+    name: 'Db high pull',
+    value: 'db-high-pulls',
+    imageUrl: 'assets/exercises/pull1/db-high-pulls.gif',
   },
   {
     name: 'Bicep chin curls (Superset with Overhead triceps extensions)',
@@ -114,7 +114,7 @@ const pull1: ExerciseWithInfo[] = [
   {
     name: 'Overhead triceps extensions (Superset with Bicep chin curls)',
     value: 'overhead-tricep-extension',
-    imageUrl: 'assets/exercises/pull1/biceps-chin-curls.gif',
+    imageUrl: 'assets/exercises/pull1/overhead-tricep-extension.gif',
   },
   {
     name: 'Angels and devils',
@@ -137,7 +137,7 @@ const pull2: ExerciseWithInfo[] = [
   {
     name: 'Db gorilla rows',
     value: 'alt-db-gorilla-rows',
-    imageUrl: 'assets/exercises/pull1/alt-db-gorilla-rows.gif',
+    imageUrl: 'assets/exercises/pull2/alt-db-gorilla-rows.gif',
   },
   {
     name: 'Straight arm pushdowns',
@@ -151,8 +151,8 @@ const pull2: ExerciseWithInfo[] = [
   },
   {
     name: 'Tricep pushdowns (Superset with Barbell curls)',
-    value: 'barbell-curls',
-    imageUrl: 'assets/exercises/pull2/barbell-curls.gif',
+    value: 'triceps-pushdowns',
+    imageUrl: 'assets/exercises/pull2/triceps-pushdowns.gif',
   },
   {
     name: 'Face pulls',
