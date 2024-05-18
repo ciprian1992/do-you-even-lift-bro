@@ -173,14 +173,9 @@ const legs: ExerciseWithInfo[] = [
     imageUrl: 'assets/exercises/legs/barbel-hip-thrusts.gif',
   },
   {
-    name: 'Barbel alternating reverse lunges',
+    name: 'Barbel/Db alternating resverse lunges',
     value: 'barbel-alternating-reverse-lunges',
     imageUrl: 'assets/exercises/legs/barbel-alternating-reverse-lunges.gif',
-  },
-  {
-    name: 'Db alternating resverse lunges',
-    value: 'db-alternating-reverse-lunges',
-    imageUrl: 'assets/exercises/legs/db-alternating-reverse-lunges.gif',
   },
   {
     name: 'Db single leg RDLs (Alternate with Slick floor bridge curls)',
@@ -193,14 +188,14 @@ const legs: ExerciseWithInfo[] = [
     imageUrl: 'assets/exercises/legs/slick-floor-bridge-curls.gif',
   },
   {
-    name: 'Standing db calf raises',
+    name: 'Standing db calf raises (Alternate with Seated)',
     value: 'standing-db-calf-raises',
     imageUrl: 'assets/exercises/legs/standing-db-calf-raises.gif',
   },
   {
-    name: 'Seated db calf raises',
-    value: 'seated-db-calf-raises',
-    imageUrl: 'assets/exercises/legs/seated-db-calf-raises.gif',
+    name: 'Seated db calf raises (Alternate with Standing)',
+    value: 'standing-db-calf-raises',
+    imageUrl: 'assets/exercises/legs/standing-db-calf-raises.gif',
   },
 ];
 
