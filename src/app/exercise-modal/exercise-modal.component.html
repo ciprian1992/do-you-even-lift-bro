@@ -8,6 +8,14 @@
 </ion-header>
 <ion-content class="ion-padding">
   <div class="exercise">
-    <ion-img [src]="exercise?.imageUrl"></ion-img>
+    <img
+      *ngIf="!imageIsLoaded"
+      class="loading-image"
+      src="assets/loading.gif"
+    />
+    <ion-img
+      [src]="exercise?.imageUrl"
+      (ionImgDidLoad)="imageLoaded()"
+    ></ion-img>
   </div>
 </ion-content>
