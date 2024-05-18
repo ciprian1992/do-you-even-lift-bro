@@ -1,7 +1,6 @@
-<ion-menu contentId="main-content">
+<ion-menu contentId="exercises-main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>User</ion-title>
       <ion-text>{{userName$ | async}}</ion-text>
     </ion-toolbar>
   </ion-header>
@@ -19,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content id="main-content" [fullscreen]="true">
+<ion-content id="exercises-main-content" [fullscreen]="true">
   <ion-segment (ionChange)="exerciseTypeChanged($event)" value="push1">
     <ion-segment-button value="pull1">
       <ion-label>Pull 1</ion-label>

@@ -1,7 +1,6 @@
-<ion-menu contentId="main-content">
+<ion-menu contentId="max-weight-main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>User</ion-title>
       <ion-text>{{userName$ | async}}</ion-text>
     </ion-toolbar>
   </ion-header>
@@ -19,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content id="main-content" [fullscreen]="true">
+<ion-content id="max-weight-main-content" [fullscreen]="true">
   <ion-segment (ionChange)="muscleGroupChanged($event)" value="pull">
     <ion-segment-button value="pull">
       <ion-label>Pull</ion-label>
