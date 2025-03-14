@@ -16,8 +16,10 @@ import {
   map,
   of,
   shareReplay,
+  startWith,
   switchMap,
   take,
+  tap,
   withLatestFrom,
 } from 'rxjs';
 import { Exercise, EXERCISES } from './exercises.const';
@@ -33,6 +35,7 @@ import {
 } from '@angular/fire/firestore';
 import { Auth, user } from '@angular/fire/auth';
 import { MaxWeight } from '../domain';
+import { getSafePropertyAccessString } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-edit-max-weight-modal',
@@ -42,6 +45,7 @@ import { MaxWeight } from '../domain';
 })
 export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
   @Input() public id?: string;
+  @Input() public maxWeight?: MaxWeight;
 
   public MUSCLE_GROUPS = muscleGroups;
   public formGroup = new FormGroup({
@@ -63,6 +67,7 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
   constructor() {
     this.exercises$ = this.formGroup.controls.muscleGroup.valueChanges.pipe(
       map((group) => (group ? EXERCISES.get(group) || [] : [])),
+      tap((value) => console.log(value)),
       map((exercises) =>
         exercises.sort((a, b) => a.name.localeCompare(b.name))
       ),
@@ -75,6 +80,18 @@ export class AddEditMaxWeightModalComponent implements OnInit, OnDestroy {
     }
 
     this.subscriptions.add(this.closeOnSave());
+
+    if (this.maxWeight) {
+      setTimeout(() => {
+        this.formGroup.patchValue({
+          muscleGroup: this.maxWeight?.muscleGroup,
+          exercise: this.maxWeight?.exercise,
+          maxWeight: this.maxWeight?.maxWeight,
+          reps: this.maxWeight?.reps,
+          info: this.maxWeight?.info ?? '',
+        });
+      }, 0);
+    }
   }
 
   public ngOnDestroy(): void {

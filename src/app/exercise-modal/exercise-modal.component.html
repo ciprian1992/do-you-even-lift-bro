@@ -17,5 +17,18 @@
       [src]="exercise?.imageUrl"
       (ionImgDidLoad)="imageLoaded()"
     ></ion-img>
+
+    <div class="max-weight" *ngIf="maxWeight$ | async as maxWeight">
+      <ion-label>
+        <h1>Max Weight: {{ maxWeight.maxWeight }} KG</h1>
+        <h1 *ngIf="maxWeight.info">Description: {{ maxWeight.info }}</h1>
+      </ion-label>
+    </div>
   </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="onAddClick()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

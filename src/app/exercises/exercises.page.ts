@@ -65,6 +65,8 @@ export class ExercisesPage implements OnInit, OnDestroy {
   }
 
   public exerciseTypeChanged(event: CustomEvent) {
+    console.log(event);
+
     this.exerciseTypeSubject.next(event.detail.value as exerciseType);
   }
 
@@ -76,7 +78,7 @@ export class ExercisesPage implements OnInit, OnDestroy {
     return this.exerciseClickSubject
       .pipe(
         withLatestFrom(this.exerciseTypeSubject),
-        switchMap(([exercise, exerciseType]) =>
+        switchMap(([exercise]) =>
           from(
             this.modalController.create({
               component: ExerciseModalComponent,

@@ -3,12 +3,18 @@
   flex: 1;
   height: 100%;
   margin-top: -30px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   .loading-image {
     height: 50px;
     width: 50px;
     position: absolute;
+  }
+
+  .max-weight {
+    font-size: 20px;
   }
 }
